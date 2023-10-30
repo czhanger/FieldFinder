@@ -1,0 +1,17 @@
+<% layout('layouts/boilerplate') %>
+<div class="card mb-3">
+  <div class="card-body">
+    <h5 class="card-title">Account Details</h5>
+    <div class="card-text">
+      <p>Name: <%= user.username %></p>
+      <p>Email: <%= user.email %></p>
+    </div>
+  </div>
+</div>
+<% for (let review of user.reviews) {%>
+<div class="card mb-3">
+  <div class="card-body">
+    <div><%= review.body %></div>
+  </div>
+</div>
+<% } %>
